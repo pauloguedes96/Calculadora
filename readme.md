@@ -1,0 +1,1 @@
+Calculadora desenvolvida em estudos com Javascript
