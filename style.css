@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --font: 'Inter', sans-serif;
+}
+
+body{
+    width: 100vw;
+    min-height: 100vh;
+}
+
+#container{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: rgb(32, 32, 32);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#containerCalc{
+    width: 312px;
+    height: 480px;
+    background-color:rgb(221, 167, 101);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* ====================================== */
+
+#visor{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(235, 218, 199);
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.658);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    position: relative;
+    overflow: hidden;
+}
+
+#visorInput{
+    outline: none;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.658);
+    font-size: 35px;
+    text-align: right;
+    font-family: var(--font);
+    font-weight: bold;
+    color: rgb(124, 75, 16);
+    padding: 10px;
+}
+
+#visorInput::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+}
+
+#visorInput2{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: none;
+    width: 70px;
+    font-size: 15px;
+    font-family: var(--font);
+    font-weight: bold;
+    color: rgb(124, 75, 16);
+    background: none;
+}
+
+/* ====================================== */
+
+#botoes{
+    width: 100%;
+    height: 350px;
+/*     background-color: rgb(121, 121, 121); */
+    display: grid;
+    grid-template-areas: "limpar limpar divi  multi"
+                         "bt7     bt8    bt9   menos"
+                         "bt4     bt5    bt6   soma"
+                         "bt1     bt2    bt3   igual"
+                         "bt0     bt0    ponto  igual";
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    gap: 10px;
+}                        
+
+.btn{
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    border-bottom: solid 3px rgb(172, 115, 47);
+    font-size: 20px;
+    font-family: var(--font);
+    font-weight: bold;
+    color: rgb(124, 75, 16);
+}
+
+.btn:active{
+    border-bottom: none;
+    border-top: solid 3px rgb(172, 115, 47);
+}
+
+#btn0{
+    width: 100%;
+    height: 60px;
+}
+
+#btnIgual{
+    width: 60px;
+    height: 100%;
+}
+
+#btnLimpar{
+    width: 100%;
+    height: 60px;
+}
+
+/* ====================================== */
+
+.b1{ grid-area: bt1; }
+.b2{ grid-area: bt2; }
+.b3{ grid-area: bt3; }
+.b4{ grid-area: bt4; }
+.b5{ grid-area: bt5; }
+.b6{ grid-area: bt6; }
+.b7{ grid-area: bt7; }
+.b8{ grid-area: bt8; }
+.b9{ grid-area: bt9; }
+.b10{ grid-area: bt0; }
+.b11{ grid-area: soma; }
+.b12{ grid-area: menos; }
+.b13{ grid-area: multi; }
+.b14{ grid-area: divi; }
+.b15{ grid-area: igual; }
+.b16{ grid-area: limpar; }
+.b17{ grid-area: ponto; }
+
+/* ====================================== */
+
+footer {
+    width: 100%;
+    height: 40px;
+    background-color:rgb(221, 167, 101);
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: var(--font);
+    font-weight: bold;
+}
+
+footer img{
+    width: 24px;
+}
